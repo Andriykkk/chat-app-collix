@@ -1,0 +1,98 @@
+export const animations = {
+  ball: {
+    initial: { x: "85%", opacity: 0 },
+    animate: { x: "65%", opacity: 1 },
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+      mass: 1,
+      duration: 2,
+      delay: 0.2,
+    },
+  },
+  torus: {
+    initial: { y: "-85%", opacity: 0 },
+    animate: { y: "-65%", opacity: 1 },
+    transition: {
+      type: "spring",
+      stiffness: 60,
+      damping: 10,
+      mass: 2,
+      duration: 2,
+      delay: 0.2,
+    },
+  },
+  spiral: {
+    initial: { x: "-105%", opacity: 0, rotate: -130 },
+    animate: { x: "-65%", opacity: 1, rotate: -100 },
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      damping: 10,
+      mass: 3,
+      duration: 2,
+      delay: 0.2,
+    },
+  },
+  grow_1: {
+    initial: { scale: 0.5, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+      mass: 1,
+      duration: 2,
+      delay: 0.2,
+    },
+  },
+  grow_2: {
+    initial: { scale: 0.5, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+      mass: 1,
+      duration: 2,
+      delay: 0.4,
+    },
+  },
+  grow_3: {
+    initial: { scale: 0.5, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+      mass: 1,
+      duration: 2,
+      delay: 0.6,
+    },
+  },
+  show: {
+    initial: { y: "100%", opacity: 0 },
+    animate: { y: "0%", opacity: 1 },
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      damping: 10,
+      mass: 1,
+      duration: 2,
+      delay: 0.2,
+    },
+  },
+  showUp: {
+    initial: { y: "-100%", opacity: 0 },
+    animate: { y: "0%", opacity: 1 },
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      damping: 10,
+      mass: 1,
+      duration: 2,
+      delay: 0.2,
+    },
+  },
+};
