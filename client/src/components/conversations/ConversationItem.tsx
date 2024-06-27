@@ -11,8 +11,6 @@ const ConversationItem = ({
   chatId,
   messages,
 }: any) => {
-  console.log(messages[0]);
-
   return (
     <Link
       href={`/conversation/${chatId}`}

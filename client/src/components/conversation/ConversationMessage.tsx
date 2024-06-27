@@ -185,7 +185,6 @@ const ConversationMessage = ({
           style={{ width: "fit-content" }}
         >
           {getMessageContent()}
-          {message.read ? "true" : "false"}
         </div>
         <div className='flex gap-2 items-center pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all'>
           {!editing &&
