@@ -3,7 +3,7 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { signIn } from "@/lib/auth";
 
-export const OPTIONS = {
+const OPTIONS = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -16,14 +16,11 @@ export const OPTIONS = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
-        if (
-          !credentials?.password ||
-          !credentials?.password
-        )
+        if (!credentials?.email || !credentials?.password)
           return null;
 
         try {
-          const user = signIn(
+          const user = await signIn(
             credentials.email,
             credentials.password
           );
@@ -34,7 +31,6 @@ export const OPTIONS = {
         }
       },
     }),
-
     GitHubProvider({
       clientId: process.env.GITHUB_ID!,
       clientSecret: process.env.GITHUB_SECRET!,
@@ -45,6 +41,6 @@ export const OPTIONS = {
   },
 };
 
-export const handler = NextAuth(OPTIONS);
+const handler = NextAuth(OPTIONS);
 
 export { handler as GET, handler as POST };
