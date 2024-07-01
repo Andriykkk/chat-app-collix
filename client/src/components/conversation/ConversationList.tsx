@@ -212,8 +212,7 @@ const ConversationList = ({
       });
     });
 
-    socket.on("createMessage", (messageJson) => {
-      const message = JSON.parse(messageJson);
+    socket.on("createMessage", (message) => {
       setMessages((prev: any) => [...prev, message]);
     });
 
